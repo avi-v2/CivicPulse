@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import Sidebar from '../components/Sidebar';
 import StatsCard from '../Components/StatsCard';
 import React,{useState,useRef,useEffect,useMemo} from 'react';
 import FilterBar from '../Components/FilterBar';
@@ -12,7 +13,9 @@ function Home(){
   });
   const [selectedReport, setSelectedReport] = useState(null);
   const mapRef = useRef();
-
+  const handleReportClick = (report) => {
+    setSelectedReport(report);
+  };
     const filteredReports = useMemo(() => {
     return reports.filter(report => {
       if (filters.category !== 'All' && report.category !== filters.category) return false;
@@ -38,6 +41,9 @@ function Home(){
             selectedReport={selectedReport}
             setSelectedReport={setSelectedReport}
           />
+        </div>
+        <div className="w-72 flex-shrink-0 rounded-xl overflow-hidden shadow-sm border border-slate-200">
+          <Sidebar reports={filteredReports} onReportClick={handleReportClick} />
         </div>
             </main>
             </div>

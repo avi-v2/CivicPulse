@@ -72,3 +72,4 @@ function Sidebar({ reports, onReportClick }) {
         </>
     )
 }
+export default Sidebar
