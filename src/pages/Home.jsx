@@ -1,9 +1,8 @@
 import Navbar from '../components/Navbar';
 import StatsCard from '../Components/StatsCard';
 import React,{useState,useRef,useEffect,useMemo} from 'react';
-// import { db } from '../firebase/firebase';
-// import { collection, onSnapshot, query } from 'firebase/firestore';
 import FilterBar from '../Components/FilterBar';
+import MapView from "../Components/MapView/MapView";
 function Home(){
   const [reports, setReports] = useState([]);
   const [filters, setFilters] = useState({
@@ -31,6 +30,14 @@ function Home(){
                 <div className="w-72 flex flex-col gap-4 flex-shrink-0">
           <FilterBar filters={filters} setFilters={setFilters} />
           <StatsCard reports={filteredReports} />
+        </div>
+         <div className="flex-1 h-full min-w-0">
+          <MapView 
+            reports={filteredReports} 
+            mapRef={mapRef}
+            selectedReport={selectedReport}
+            setSelectedReport={setSelectedReport}
+          />
         </div>
             </main>
             </div>

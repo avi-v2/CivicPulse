@@ -6,7 +6,6 @@ import { useAppContext } from '../../context/AppContext';
 import { AlertTriangle, Trash2, Droplets, Lightbulb, Waves, TrafficCone, Info, MapPin } from 'lucide-react';
 import { STATUS_COLORS, CATEGORY_ICONS } from '../../utils/constants';
 
-
 const MAPTILER_KEY = 'SAJcgN11FF9TBJH3vpCZ';
 
 const MapView = ({ onMapClick }) => {
