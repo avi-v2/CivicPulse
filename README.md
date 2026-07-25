@@ -86,18 +86,6 @@ npm run dev
 
 ---
 
-## 📸 Screenshots
-
-> Add screenshots here
-
-- Home Page
-- Interactive Map
-- Report Submission Form
-- Dashboard
-- Admin Panel
-
----
-
 ## 🎯 Future Enhancements
 
 - AI-based issue classification from uploaded images
